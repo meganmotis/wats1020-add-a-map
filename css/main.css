@@ -11,6 +11,11 @@ body {
 	padding-bottom: 20px;
 }
 
+img {
+	max-height: 1000px;
+	width: auto;
+	margin: auto;
+}
 
 
 
