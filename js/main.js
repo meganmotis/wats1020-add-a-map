@@ -44,7 +44,15 @@ $(document).ready(function() {
 	var marker3 = L.marker([46.849891, -121.711974]).addTo(map);
 	marker3.bindPopup("This is <b>Little Tahoma Peak</b>.<br> This peak is 11,138 feet high.");
 	
-	
+	// Opens a tab if it's not active, and adds smooth scroll	
+	$('a.js-link-scroll').on('shown.bs.tab', function (e) {
+   		$('#tabs .active').removeClass('active');
+   		$('a[href="'+$(this).attr('href')+'"]').parent().addClass('active');
+   	 		var that = this;
+   	 		$('html, body').animate({
+   	     	scrollTop: $( $(that).attr('href') ).offset().top
+   	 		}, 800);
+	});	
 	
 });
 
